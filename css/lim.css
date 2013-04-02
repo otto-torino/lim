@@ -1,0 +1,277 @@
+.lim-bar {
+  background: #eee;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: Tahoma, Arial;
+  box-shadow: 0 0 5px #000;
+  color: #000;
+  font-size: 1em;
+  z-index: 10;
+}
+.lim-bar .left {
+  margin-left: 10px;
+}
+
+.lim-bar .right {
+  margin-right: 10px;
+}
+
+/* checkbox ios style */
+.lim-bar label {
+  font-weight: bold;
+}
+
+:root input[type="checkbox"] { /* :root here acting as a filter for older browsers */
+  position: absolute;
+  opacity: 0;
+}
+
+:root input[type="checkbox"].ios-switch + div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3em;	height: 1em;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 999px;
+  margin: 0 .5em;
+  background: white;
+  background-image: linear-gradient(rgba(0,0,0,.1), transparent),
+                    linear-gradient(90deg, hsl(210, 90%, 60%) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-origin: border-box;
+  background-clip: border-box;
+  overflow: hidden;
+  transition-duration: .4s;
+  transition-property: padding, width, background-position, text-indent;
+  box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+              0 .45em 0 .1em rgba(0,0,0,.05) inset;
+  font-size: 150%; /* change this and see how they adjust! */
+}
+
+:root input[type="checkbox"].mode + div {
+  width: 3.5em;	height: 1em;
+}
+
+:root input[type="checkbox"].ios-switch:checked + div {
+  padding-left: 2em;	width: 1em;
+  background-position: 0 0;
+}
+
+:root input[type="checkbox"].mode:checked + div {
+  padding-left: 2.5em;	width: 1em;
+}
+
+
+:root input[type="checkbox"].ios-switch + div:before {
+  content: 'On';
+  float: left;
+  width: 1.65em; height: 1.65em;
+  margin: -.1em;
+  border: 1px solid rgba(0,0,0,.35);
+  border-radius: inherit;
+  background: white;
+  background-image: linear-gradient(rgba(0,0,0,.2), transparent);
+  box-shadow: 0 .1em .1em .1em hsla(0,0%,100%,.8) inset,
+              0 0 .5em rgba(0,0,0,.3);
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0,0,0,.3);
+  text-indent: -2.5em;
+}
+:root input[type="checkbox"].mode + div:before {
+  content: 'Edit' !important;
+  margin-right: 5px;
+  width: 1.8em; height: 1.65em;
+  text-indent: -3em;
+}
+
+:root input[type="checkbox"].position + div:before {
+  content: 'Bot' !important;
+}
+
+:root input[type="checkbox"].ios-switch:active + div:before {
+  background-color: #eee;
+}
+
+:root input[type="checkbox"].ios-switch:focus + div {
+  box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+              0 .45em 0 .1em rgba(0,0,0,.05) inset,
+              0 0 .4em 1px rgba(255,0,0,.5);
+}
+
+:root input[type="checkbox"].ios-switch + div:before,
+:root input[type="checkbox"].ios-switch + div:after {
+  font: bold 60%/1.9 sans-serif;
+  text-transform: uppercase;
+}
+
+:root input[type="checkbox"].ios-switch + div:after {
+  content: 'Off';
+  float: left;
+  text-indent: .5em;
+  color: rgba(0,0,0,.45);
+  text-shadow: none;
+}
+
+:root input[type="checkbox"].mode + div:after {
+  content: 'View';
+  width: 1.8em; height: 1.65em;
+  text-indent: 0em;
+}
+
+:root input[type="checkbox"].position + div:after {
+  content: 'Top';
+}
+
+/* end checkbox ios style */
+
+/* ALL COMPONENTS */
+#lim-tool_window {
+  position: absolute;
+  background: #333;
+  width: 200px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0px 2px 5px #000;
+}
+#lim-tool_window h1 {
+  background: #000;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2px 5px;
+  margin: 0;
+  border-radius: 6px 6px 0 0;
+}
+#lim-tool_window_body {
+  position: relative;
+  height: 36px;
+}
+/* END ALL COMPONENTS */
+
+/* PAINTER */
+
+#lim-painter-clear_tool {
+  height: 30px; width: 30px;
+  background: url('../img/painter/icon_trash.png') no-repeat center center;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 133px;
+}
+#lim-painter-save_tool {
+  height: 30px; width: 30px;
+  background: url('../img/painter/icon_save.png') no-repeat center center;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 165px;
+}
+#lim-painter-color1_tool {
+  height: 26px; width: 26px;
+  background-color: #ff0000;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 2px solid #333;
+}
+#lim-painter-color2_tool {
+  height: 26px; width: 26px;
+  background-color: #00ff00;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 37px;
+  border: 2px solid #333;
+}
+#lim-painter-color3_tool {
+  height: 26px; width: 26px;
+  background-color: #0000ff;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 69px;
+  border: 2px solid #333;
+}
+span[id^=lim-painter-color].active {
+  border: 2px solid #fff !important;
+}
+
+/* notes */
+.lim-note {
+  border: 1px solid #666;
+  box-shadow: 5px 5px 5px #666;
+  background: #f8f085;
+  font-size: 1em;
+  line-height: 1.8em;
+  background-image: linear-gradient(#aaa 1px, transparent 1px);
+  background-size: 100% 1.8em;
+  background-origin: content-box;
+  width: 200px;
+}
+.lim-note p {
+  margin-top: 2px;
+}
+textarea.lim-note {
+  margin: -2px 0 0 5px;
+  background-position: 0 -.3em;
+  height: 200px;
+}
+div.lim-note {
+  background-position: 0 0em;
+  padding: 0 10px;
+  margin-left: 5px;
+}
+input.lim-note {
+  display: block;
+  position: relative;
+  height: 20px;
+  top:-24px;
+  left: 5px;
+  background: #f8f085;
+  border: 1px solid #000;
+  width: auto !important;
+}
+.lim-note-active {
+  cursor: default;
+  outline: 2px solid #aaaaff;
+}
+/* highlighter */
+.lim-highlighter-highlighted {
+  /* color is set by js */
+}
+#lim-highlighter-color1_tool {
+  height: 26px; width: 26px;
+  background-color: #ff7e79;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 2px solid #333;
+}
+#lim-highlighter-color2_tool {
+  height: 26px; width: 26px;
+  background-color: #8efa00;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 37px;
+  border: 2px solid #333;
+}
+#lim-highlighter-color3_tool {
+  height: 23px; width: 23px;
+  background-color: #76d6ff;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 69px;
+  border: 2px solid #333;
+}
+span[id^=lim-highlighter-color].active {
+  border: 2px solid #fff !important;
+}
+
