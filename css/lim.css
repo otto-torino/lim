@@ -263,12 +263,21 @@ input.lim-note {
   border: 2px solid #333;
 }
 #lim-highlighter-color3_tool {
-  height: 23px; width: 23px;
+  height: 26px; width: 26px;
   background-color: #76d6ff;
   display: block;
   position: absolute;
   top: 5px;
   left: 69px;
+  border: 2px solid #333;
+}
+#lim-highlighter-color4_tool {
+  height: 26px; width: 26px;
+  background-color: #ffff00;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 101px;
   border: 2px solid #333;
 }
 span[id^=lim-highlighter-color].active {
